@@ -1,0 +1,77 @@
+{% load static %}
+
+
+
+<!--*************Contact Form*************-->
+
+<div class="modal fade" id="contact" tabindex="-1" role="dialog" aria-labelledby="contact-form"
+     aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-body back">
+                <div class="form-head">Get In touch</div>
+                <form action="{% url 'home' %}" method="post">
+                    {% csrf_token %}
+                    <div class="form-grp">
+                        <input type="text" id="name" class="form-control" name="name"
+                               required="required">
+                        <label class="form-control-placeholder" for="name">Name</label>
+                    </div>
+                    <div class="form-grp">
+                        <input name="email" type="text" id="email" class="form-control" required="required">
+                        <label class="form-control-placeholder" for="email">E-mail</label>
+                    </div>
+                    <div class="form-grp">
+                    <textarea name='subject' onkeyup="countChar(this)" id="subject" class="form-control" rows="1"
+                              cols="25" maxlength="120" required="required"
+                    ></textarea>
+                        <label class="form-control-placeholder" for="subject">Subject</label>
+                        <div class="small-text" id="charNum">50</div>
+                    </div>
+                    <div class="form-grp">
+                    <textarea name='message' id="message" class="form-control" rows="2"
+                              cols="25" required="required"
+                    ></textarea>
+                        <label class="form-control-placeholder" for="message">Message</label>
+                    </div>
+                    <button type="submit" style="left: 15px" class="button button-subscribe">Send</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--*************Subscribe Form*************-->
+
+<div class="modal fade" id="subscribe" tabindex="-1" role="dialog" aria-labelledby="subscribe-form"
+     aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-body back">
+                <div class="form-head">Join Us Now</div>
+                <form action="{% url 'join' %}" method="post">
+                   {% csrf_token %}
+                    <div class="form-grp">
+                        <input name="name" type="text" id="name" class="form-control"
+                               required>
+                        <label class="form-control-placeholder" for="name">Name</label>
+                    </div>
+                    <div class="form-grp">
+                        <input name="email" type="text" id="email" class="form-control" required>
+                        <label class="form-control-placeholder" for="email">E-mail</label>
+                    </div>
+                    <div class="form-grp">
+                        <input name="subscribe" type="checkbox" id="subscribe">
+                        <label for="subscribe">Subscribe to our Newsletter </label>
+                    </div>
+                    <button style="left: 15px" class="button button-subscribe">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+
+</script>
+

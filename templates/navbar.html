@@ -1,0 +1,34 @@
+{% load static %}
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <a data-aos="fade-right" class="navbar-brand" href="{% url 'home' %}"><img style="width: 100%;height: auto;max-width: 150px"
+                                                                src="{% static 'yoogge/images/Full-NyK-Logo.png' %}"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <button data-aos="fade-down" onclick="window.location.href='#'" class="button button-hover-effect "
+                        data-text="Home"><span>Home</span></button>
+            </li>
+            <li class="nav-item">
+                <button data-aos="fade-down" onclick="window.location.href='#'" class="button button-hover-effect"
+                        data-text="About Us"><span>About Us</span></button>
+            </li>
+            <li class="nav-item">
+                <button data-aos="fade-down" class="button button-hover-effect"
+                        data-text="Contact Us" data-toggle="modal"
+                        data-target="#contact"><span>Contact Us</span></button>
+            </li>
+
+        </ul>
+        <div style="margin-right: 7%;margin-top: 3%">
+            <form class="search " action="">
+                <input aria-label="Search" placeholder="Search Products" class="input" type="search">
+                <i data-aos="fade-left" class="fa fa-search" style="margin-top: 2%"></i>
+            </form>
+        </div>
+    </div>
+</nav>
